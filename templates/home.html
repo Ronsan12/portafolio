@@ -1,0 +1,309 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="portfolio-layout">
+
+        <!-- IZQUIERDA -->
+        <aside class="sidebar">
+
+            <div class="text-center">
+
+                <img src="{% static 'img/profile.jpeg' %}"
+                     class="profile-img"
+                     alt="Ronald Santos">
+
+                <h2 class="mt-4">
+                    Ronald Santos
+                </h2>
+
+                <h5 class="job-title">
+                    Backend Developer
+                </h5>
+
+                <p class="location">
+                    Yopal, Colombia
+                </p>
+
+                <p class="hero-description mt-3">
+                    Backend Developer | Python | Django | PostgreSQL
+                </p>
+
+            </div>
+
+            <hr>
+
+            <nav class="sidebar-nav">
+
+                <a href="#about">
+                    Sobre mí
+                </a>
+
+                <a href="#experience">
+                    Experiencia
+                </a>
+
+                <a href="#projects">
+                    Proyectos
+                </a>
+
+                <a href="#contact">
+                    Contacto
+                </a>
+
+            </nav>
+
+            <hr>
+
+            <div class="d-grid gap-2">
+
+                <a href="https://github.com/Ronsan12"
+                   target="_blank"
+                   class="btn btn-outline-light">
+                    GitHub
+                </a>
+
+                <a href="https://www.linkedin.com/in/ronsan12"
+                   target="_blank"
+                   class="btn btn-outline-light">
+                    LinkedIn
+                </a>
+
+                <a href="{% static 'documents/Ronald_Santos_CV.pdf' %}"
+                   target="_blank"
+                   class="btn btn-light">
+                    Descargar CV
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- DERECHA -->
+        <main class="content-area">
+            <div class="content-wrapper">
+
+                <section id="about">
+
+                    <h2 class="section-title">
+                        Sobre mí
+                    </h2>
+
+                    <p>
+                        Soy Ingeniero de Software con experiencia en soporte técnico,
+                        administración de bases de datos y desarrollo de aplicaciones
+                        web y móviles.
+                    </p>
+
+                    <p>
+                        Actualmente me especializo en desarrollo backend con Python,
+                        Django y PostgreSQL, construyendo soluciones escalables y
+                        orientadas a negocio.
+                    </p>
+
+                    <p>
+                        Mi experiencia combinando soporte en producción y desarrollo
+                        me permite comprender tanto los aspectos técnicos como las
+                        necesidades operativas de los usuarios.
+                    </p>
+
+                </section>
+
+                <!-- EXPERIENCIA PROFESIONAL -->
+                <section id="experience">
+
+                    <h2 class="section-title">
+                        Experiencia
+                    </h2>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-year">
+                                2024 - Actualidad
+                            </div>
+
+                            <div class="timeline-content">
+
+                                <h4>Geteco</h4>
+
+                                <p class="experience-role">
+                                    Soporte Técnico de Aplicaciones
+                                </p>
+
+                                <ul>
+                                    <li>Administración y consulta de bases de datos Visual FoxPro y SQL.</li>
+                                    <li>Resolución de incidencias en ambientes productivos.</li>
+                                    <li>Capacitación y soporte a clientes.</li>
+                                    <li>Configuración y parametrización de aplicaciones empresariales.</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-year">
+                                2021 - 2023
+                            </div>
+
+                            <div class="timeline-content">
+
+                                <h4>Interservice S.A.</h4>
+
+                                <p class="experience-role">
+                                    Líder Operativo
+                                </p>
+
+                                <ul>
+                                    <li>Gestión documental y procesos bancarios.</li>
+                                    <li>Seguimiento de indicadores operativos.</li>
+                                    <li>Atención y soporte a usuarios.</li>
+                                    <li>Elaboración de informes y control de procesos.</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- PROYECTOS -->
+                <section id="projects">
+
+                    <h2 class="section-title">
+                        Proyectos
+                    </h2>
+
+                    <p class="section-description">
+                        Algunos de los proyectos en los que he trabajado utilizando
+                        Django, PostgreSQL, Flutter y otras tecnologías.
+                    </p>
+
+                    <div class="row">
+
+                        {% for proyecto in proyectos %}
+
+                        <div class="col-12 mb-4">
+
+                            <div class="project-card">
+
+                                <div class="project-layout">
+
+                                    <div class="project-image">
+
+                                        {% if proyecto.imagen %}
+                                        <img src="{{ proyecto.imagen.url }}"
+                                             alt="{{ proyecto.nombre }}">
+                                        {% endif %}
+
+                                    </div>
+
+                                    <div class="project-info">
+
+                                        <h4>{{ proyecto.nombre }}</h4>
+
+                                        <p>
+                                            {{ proyecto.descripcion }}
+                                        </p>
+
+                                        <div class="tech-list">
+
+                                            <p class="tech-text">
+                                                {{ proyecto.tecnologias }}
+                                            </p>
+
+                                        </div>
+
+                                        <div class="project-links">
+
+                                            {% if proyecto.github %}
+                                            <a href="{{ proyecto.github }}"
+                                               target="_blank">
+                                                GitHub
+                                            </a>
+                                            {% endif %}
+
+                                            {% if proyecto.video_demo %}
+                                            <a href="{{ proyecto.video_demo }}"
+                                               target="_blank">
+                                                Demo
+                                            </a>
+                                            {% endif %}
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                </section>
+
+                <!-- CONTACTO -->
+                <section id="contact">
+
+                    <h2 class="section-title">
+                        Contacto
+                    </h2>
+
+                    <div class="contact-card">
+
+                        <p>
+                            <strong>Email:</strong>
+                            ronsan12@outlook.com
+                        </p>
+
+                        <p>
+                            <strong>Teléfono:</strong>
+                            3118815610
+                        </p>
+
+                        <p>
+                            <strong>Ubicación:</strong>
+                            Yopal, Casanare, Colombia
+                        </p>
+
+                        <div class="contact-buttons">
+
+                            <a href="https://github.com/Ronsan12"
+                               target="_blank"
+                               class="btn btn-primary">
+                                GitHub
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/ronsan12"
+                               target="_blank"
+                               class="btn btn-info">
+                                LinkedIn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}
