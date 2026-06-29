@@ -90,17 +90,8 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default=f"postgresql://{config('DB_USER')}:{config('DB_PASSWORD')}@{config('DB_HOST')}:{config('DB_PORT')}/{config('DB_NAME')}",
-        conn_max_age=600,
-    )
+    "default": dj_database_url.config(conn_max_age=600)
 }
-
-if config("DATABASE_URL", default=""):
-    DATABASES["default"] = dj_database_url.parse(
-        config("DATABASE_URL"),
-        conn_max_age=600,
-    )
 
 
 # Password validation
