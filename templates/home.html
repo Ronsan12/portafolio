@@ -29,7 +29,7 @@
                 </p>
 
                 <p class="hero-description mt-3">
-                    Backend Developer | Python | Django | PostgreSQL
+                    Python | Django | PostgreSQL | Docker
                 </p>
 
             </div>
@@ -40,6 +40,10 @@
 
                 <a href="#about">
                     Sobre mí
+                </a>
+
+                <a href="#skills">
+                    Tecnologías
                 </a>
 
                 <a href="#experience">
@@ -63,19 +67,31 @@
                 <a href="https://github.com/Ronsan12"
                    target="_blank"
                    class="btn btn-outline-light">
+
+                   <i class="bi bi-github me-2"></i>
+
                     GitHub
+
                 </a>
 
                 <a href="https://www.linkedin.com/in/ronsan12"
                    target="_blank"
                    class="btn btn-outline-light">
-                    LinkedIn
+
+                   <i class="bi bi-linkedin me-2"></i>
+
+                   LinkedIn
+
                 </a>
 
                 <a href="{% static 'documents/Ronald_Santos_CV.pdf' %}"
                    target="_blank"
                    class="btn btn-light">
-                    Descargar CV
+
+                   <i class="bi bi-download me-2"></i>
+
+                   Descargar CV
+
                 </a>
 
             </div>
@@ -93,22 +109,55 @@
                     </h2>
 
                     <p>
-                        Soy Ingeniero de Software con experiencia en soporte técnico,
-                        administración de bases de datos y desarrollo de aplicaciones
-                        web y móviles.
+                        Ingeniero de Software apasionado por el desarrollo backend y la construcción de aplicaciones escalables utilizando Python, Django y PostgreSQL.
                     </p>
 
                     <p>
-                        Actualmente me especializo en desarrollo backend con Python,
-                        Django y PostgreSQL, construyendo soluciones escalables y
-                        orientadas a negocio.
+                        Tengo experiencia tanto en soporte técnico de aplicaciones empresariales como en el desarrollo de soluciones web y móviles, lo que me permite comprender las necesidades del negocio y convertirlas en software funcional.
                     </p>
 
                     <p>
-                        Mi experiencia combinando soporte en producción y desarrollo
-                        me permite comprender tanto los aspectos técnicos como las
-                        necesidades operativas de los usuarios.
+                        Actualmente continúo fortaleciendo mis conocimientos en arquitecturas backend, Docker y desarrollo de APIs REST.
                     </p>
+
+                </section>
+
+                <!-- HABILIDADES -->
+
+                <section id="skills">
+
+                    <h2 class="section-title">
+                        Tecnologías
+                    </h2>
+
+                    <div class="skills-grid">
+
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <p>Python · Django · PostgreSQL · SQL · APIs REST</p>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <p>HTML · CSS · JavaScript · Bootstrap · React</p>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Mobile</h4>
+                            <p>Flutter</p>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>DevOps</h4>
+                            <p>Docker · Git · Nginx</p>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Infraestructura</h4>
+                            <p>Linux · Redes · VLAN · VPN · OSPF · EIGRP</p>
+                        </div>
+
+                    </div>
 
                 </section>
 
@@ -136,10 +185,11 @@
                                 </p>
 
                                 <ul>
-                                    <li>Administración y consulta de bases de datos Visual FoxPro y SQL.</li>
-                                    <li>Resolución de incidencias en ambientes productivos.</li>
-                                    <li>Capacitación y soporte a clientes.</li>
-                                    <li>Configuración y parametrización de aplicaciones empresariales.</li>
+                                    <li>Administración y consulta de bases de datos SQL (Visual FoxPro) sobre tablas de historias clínicas (+100 pacientes) y catálogos de productos (+500 ítems), garantizando integridad y disponibilidad de datos en producción.</li>
+                                    <li>Escritura de consultas SQL para operaciones CRUD (SELECT, INSERT, UPDATE, DELETE) sobre datos clínicos y de inventario.</li>
+                                    <li>Análisis y resolución de errores en entornos productivos, garantizando la continuidad operativa del software.</li>
+                                    <li>Capacitación a clientes en el uso del software, brindando soporte funcional y acompañamiento en la adopción de la herramienta.</li>
+                                    <li>Realizar configuraciones básicas y ajustes de parámetros en aplicaciones en producción.</li>
                                 </ul>
 
                             </div>
@@ -161,10 +211,11 @@
                                 </p>
 
                                 <ul>
-                                    <li>Gestión documental y procesos bancarios.</li>
-                                    <li>Seguimiento de indicadores operativos.</li>
-                                    <li>Atención y soporte a usuarios.</li>
-                                    <li>Elaboración de informes y control de procesos.</li>
+                                    <li>Revisión, radicación y envío de documentos bancarios, garantizando el cumplimiento de los procedimientos internos.</li>
+                                    <li>Control y seguimiento de indicadores de la gerencia logística del banco, apoyando la toma de decisiones operativas</li>
+                                    <li>Manejo de herramientas de Office para la elaboración y actualización de documentos e informes de gestión.</li>
+                                    <li>Uso de aplicaciones web del Banco de Interservicios para la gestión y trámite de procesos operativos.</li>
+                                    <li>Atención al cliente, brindando soporte en requerimientos relacionados con documentos bancarios y gestiones logísticas.</li>
                                 </ul>
 
                             </div>
@@ -224,19 +275,21 @@
 
                                         <div class="project-links">
 
-                                            {% if proyecto.github %}
-                                            <a href="{{ proyecto.github }}"
-                                               target="_blank">
-                                                GitHub
-                                            </a>
-                                            {% endif %}
+                                            <a href="{{ proyecto.github }}" target="_blank">
 
-                                            {% if proyecto.video_demo %}
-                                            <a href="{{ proyecto.video_demo }}"
-                                               target="_blank">
-                                                Demo
+                                                <i class="bi bi-github"></i>
+
+                                                GitHub
+
                                             </a>
-                                            {% endif %}
+
+                                            <a href="{{ proyecto.video_demo }}" target="_blank">
+
+                                                <i class="bi bi-play-circle"></i>
+
+                                                Demo
+
+                                            </a>
 
                                         </div>
 
@@ -264,32 +317,36 @@
                     <div class="contact-card">
 
                         <p>
-                            <strong>Email:</strong>
-                            ronsan12@outlook.com
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            <strong>Email:</strong> ronsan12@outlook.com
                         </p>
 
                         <p>
-                            <strong>Teléfono:</strong>
-                            3118815610
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            <strong>Teléfono:</strong> 3118815610
                         </p>
 
                         <p>
-                            <strong>Ubicación:</strong>
-                            Yopal, Casanare, Colombia
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            <strong>Ubicación:</strong> Yopal, Casanare, Colombia
                         </p>
 
                         <div class="contact-buttons">
 
                             <a href="https://github.com/Ronsan12"
-                               target="_blank"
-                               class="btn btn-primary">
-                                GitHub
+                            target="_blank"
+                            class="btn btn-outline-light rounded-circle social-btn">
+
+                                <i class="bi bi-github"></i>
+
                             </a>
 
                             <a href="https://www.linkedin.com/in/ronsan12"
-                               target="_blank"
-                               class="btn btn-info">
-                                LinkedIn
+                            target="_blank"
+                            class="btn btn-outline-info rounded-circle social-btn">
+
+                                <i class="bi bi-linkedin"></i>
+
                             </a>
 
                         </div>

@@ -237,3 +237,38 @@ body{
     color:#64ffda;
     padding-left:10px;
 }
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.skill-category{
+    padding:20px;
+    border-left:2px solid #64ffda;
+}
+
+.skill-category h4{
+    color:#64ffda;
+    margin-bottom:10px;
+    font-size:1rem;
+}
+
+.skill-category p{
+    color:#cbd5e1;
+    line-height:1.7;
+    margin:0;
+}
+
+.social-btn{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.4rem;
+}
