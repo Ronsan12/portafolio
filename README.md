@@ -1,4 +1,4 @@
-# 💼 Ronald Santos | Portfolio Personal
+# 💼 Ronald Santos | Portafolio Personal
 
 Este repositorio contiene el código fuente de mi portafolio personal, desarrollado para presentar mi experiencia profesional, proyectos y tecnologías como Backend Developer.
 

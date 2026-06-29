@@ -268,3 +268,91 @@ body {
     height: 50px;
     font-size: 1.4rem;
 }
+
+/*RESPONSIVE*/
+
+@media (max-width: 768px){
+
+    .portfolio-layout{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        min-width:100%;
+        height:auto;
+        padding:30px 20px;
+    }
+
+    .content-area{
+        width:100%;
+        flex:none;
+        margin-left:0;
+        padding:30px 20px;
+    }
+
+    .content-wrapper{
+        max-width:100%;
+        margin:0;
+    }
+
+    .project-layout{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-image{
+        width: 100%;
+    }
+
+    .project-image img{
+        width:100%;
+        max-height:220px;
+        object-fit:cover;
+    }
+
+    .project-info{
+        width: 100%;
+    }
+
+    .section-title{
+        font-size: 2rem;
+    }
+
+    /* EXPERIENCIA */
+
+    .timeline::before{
+        display: none;
+    }
+
+    .timeline-item{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+
+    .timeline-year{
+        width: auto;
+        margin-bottom: 12px;
+        color: #64ffda;
+        font-weight: 600;
+        font-size: .95rem;
+    }
+
+    .timeline-content{
+        padding-left: 0;
+    }
+
+    .timeline-content::before{
+        display: none;
+    }
+
+    .timeline-content h4{
+        font-size: 1.6rem;
+    }
+
+}
+
