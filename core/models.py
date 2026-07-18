@@ -4,8 +4,9 @@ class Proyecto(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField()
 
-    imagen = models.ImageField(
-        upload_to='projects/'
+    imagen = models.CharField(
+        max_length=200,
+        help_text="Ejemplo: img/projects/posPizza.png"
     )
 
     github = models.URLField()

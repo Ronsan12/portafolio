@@ -251,8 +251,8 @@
                                     <div class="project-image">
 
                                         {% if proyecto.imagen %}
-                                        <img src="{{ proyecto.imagen.url }}"
-                                             alt="{{ proyecto.nombre }}">
+                                            <img src="{% static proyecto.imagen %}"
+                                                alt="{{ proyecto.nombre }}">
                                         {% endif %}
 
                                     </div>
